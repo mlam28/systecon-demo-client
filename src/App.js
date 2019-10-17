@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ResultChart from './containers/ResultChart'
+import * as data from './FrontEndDemoData.json'
+
+const jsonData = JSON.stringify(data)
+const objData = JSON.parse(jsonData)
+const chartData = objData.default['View1 - Result Chart']
+const modelOneData = chartData.filter(info => info.MODEL ===  "Demo - Model 01")
+const modelTwoData = chartData.filter(info => info.MODEL ===  "Demo - Model 02")
+const modelThreeData = chartData.filter(info => info.MODEL ===  "Demo - Model 03")
+
+const tableData = objData.default["View2 - Result Table"]
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <script src='./FrontEndDemoData.json'></script>
+      <ResultChart data={modelOneData} dataTwo={modelTwoData} dataThree={modelThreeData}/>
     </div>
   );
 }
