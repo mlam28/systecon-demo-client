@@ -30,7 +30,7 @@ class App extends React.Component{
       <div className="App">
         <script src='./FrontEndDemoData.json'></script>
         <ResultChart data={modelOneData} dataTwo={modelTwoData} dataThree={modelThreeData}/>
-        <ResultTable />
+        <ResultTable data={modelOneTable}/>
       </div>
     );
   }

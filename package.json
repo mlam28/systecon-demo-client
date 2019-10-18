@@ -5,6 +5,7 @@
   "dependencies": {
     "chart.js": "^2.8.0",
     "react": "^16.10.2",
+    "react-bootstrap-table-next": "^3.2.1",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
