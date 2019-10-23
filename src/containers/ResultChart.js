@@ -90,7 +90,7 @@ class ResultChart extends React.Component{
     }
 
     render() {
-        debugger
+
         return (
             <div >
                 <canvas
