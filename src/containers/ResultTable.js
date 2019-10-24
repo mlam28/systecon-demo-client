@@ -1,6 +1,7 @@
 import React from 'react'
 import BootstrapTable from 'react-bootstrap-table-next'
 import filterFactory, { selectFilter, textFilter } from 'react-bootstrap-table2-filter'
+import paginationFactory from 'react-bootstrap-table2-paginator'
 import {tableData} from '../App'
 
 
@@ -98,7 +99,7 @@ class ResultTable extends React.Component{
 
         return(
             <div>
-                  <BootstrapTable keyField='id' striped hovered condensed data={ this.props.data } columns={ this.columns } filter={filterFactory()} />
+                  <BootstrapTable keyField='id' striped hovered condensed data={ this.props.data } columns={ this.columns } filter={filterFactory()} pagination={paginationFactory()} />
             </div>
         )
     }
