@@ -22,18 +22,17 @@ const tableData = objData.default["View2 - Result Table"]
 
 const editorData = objData.default['View3 - Model Table']
 
-// const modelOneTable = tableData.filter(info => info.MODEL === "Demo - Model 01")
-// const modelTwoTable = tableData.filter(info => info.MODEL === "Demo - Model 02")
-// const modelThreeTable = tableData.filter(info => info.MODEL === "Demo - Model 03")
 
-function onlyUnique(value, index, self) { 
-  return self.indexOf(value) === index;
-}
 
 class App extends React.Component{
 
   state={
     open: false
+  }
+
+  componentDidMount(){
+    console.log(tableData)
+    debugger
   }
 
 
@@ -69,3 +68,5 @@ class App extends React.Component{
 }
 
 export default App;
+
+export {tableData}
